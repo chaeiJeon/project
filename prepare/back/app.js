@@ -35,10 +35,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.get('/api', (req,res)=>{
-    res.send('hello api');
-});
 app.get('/posts', (req,res)=>{
     res.json([ //json은 보통 data를 의미한다고 보면 된다. res
         {id : 1, content : 'hello'},
